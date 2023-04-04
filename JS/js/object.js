@@ -226,19 +226,19 @@ function countProps2(object) {
 // ---------------------------------------------------
 // переберання масиву обьєктів
 
-const colors = [
+const colors1 = [
     { hex: "#f44336", rgb: "244,67,54" },
     { hex: "#2196f3", rgb: "33,150,243" },
     { hex: "#4caf50", rgb: "76,175,80" },
     { hex: "#ffeb3b", rgb: "255,235,59" },
 ];
 
-const hexColors = [];
-const rgbColors = [];
+const hexColors1 = [];
+const rgbColors1 = [];
 // Change code below this line
-for (let color of colors) {
-    hexColors.push(color.hex);
-    rgbColors.push(color.rgb);
+for (let color of colors1) {
+    hexColors1.push(color.hex);
+    rgbColors1.push(color.rgb);
 }
 
 //   console.log(hexColors,rgbColors)
@@ -337,8 +337,181 @@ function calculateTotalPrice(productName) {
     return totapPrice;
 }
 
-console.log(calculateTotalPrice("Blaster")); // 0
-console.log(calculateTotalPrice("Radar")); // 5200
-console.log(calculateTotalPrice("Droid")); // 2800
-console.log(calculateTotalPrice("Grip")); // 10800
-console.log(calculateTotalPrice("Scanner")); // 8100
+// console.log(calculateTotalPrice("Blaster")); // 0
+// console.log(calculateTotalPrice("Radar")); // 5200
+// console.log(calculateTotalPrice("Droid")); // 2800
+// console.log(calculateTotalPrice("Grip")); // 10800
+// console.log(calculateTotalPrice("Scanner")); // 8100
+//________________________--------
+
+
+const highTemperatures1 = {
+    yesterday1: 28,
+    today1: 26,
+    tomorrow1: 33,
+  };
+  // const yesterday = highTemperatures.yesterday;
+  // const today = highTemperatures.today;
+  // const tomorrow = highTemperatures.tomorrow;
+  
+  const {yesterday1,today1,tomorrow1}= highTemperatures1;
+  
+ 
+  const meanTemperature1 = (yesterday1 + today1 + tomorrow1)/3;
+  
+  console.log("yesterday", yesterday1)
+  console.log("tooday", today1)  
+  console.log("tomorrow", tomorrow1)
+  console.log("meanTemperature", meanTemperature1)
+
+  //---------------------------
+
+//   const highTemperatures = {
+//     yesterday: 28,
+//     today: 26,
+//     tomorrow: 33,
+//   };
+//   // Change code below this line
+  
+// //   const yesterday = highTemperatures.yesterday;
+// //   const today = highTemperatures.today;
+// //   const tomorrow = highTemperatures.tomorrow;
+// //   const icon = highTemperatures.icon;
+
+// const{yesterday,
+//     today,
+//     tomorrow,
+//     icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg "
+// } = highTemperatures;
+
+  
+//   // Change code above this line
+//   const meanTemperature = (yesterday + today + tomorrow) / 3;
+//   console.log("yesterday", yesterday)
+//   console.log("tooday", today)  
+//   console.log("tomorrow", tomorrow)
+//   console.log("icon", icon)
+//   console.log("meanTemperature", meanTemperature)
+
+
+// const highTemperatures = {
+//     yesterday: 28,
+//     today: 26,
+//     tomorrow: 33,
+//   };
+//   // Change code below this line
+  
+//   // const highYesterday = highTemperatures.yesterday;
+//   // const highToday = highTemperatures.today;
+//   // const highTomorrow = highTemperatures.tomorrow;
+//   // const highIcon = highTemperatures.icon;
+//   const {yesterday:highYesterday,
+//          today:highToday,
+//          tomorrow:highTomorrow,
+//         highIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg' } =highTemperatures;
+  
+//   // Change code above this line
+//   const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+  
+//   console.log(highYesterday)
+//   console.log(highToday)
+//   console.log(highTomorrow)
+//   console.log(highIcon)
+//   console.log(meanTemperature)
+// ------------------------------------------------------
+
+// const colors = [
+//     { hex: "#f44336", rgb: "244,67,54" },
+//     { hex: "#2196f3", rgb: "33,150,243" },
+//     { hex: "#4caf50", rgb: "76,175,80" },
+//     { hex: "#ffeb3b", rgb: "255,235,59" },
+//   ];
+  
+//   const hexColors = [];
+//   const rgbColors = [];
+  
+  
+//   for (const color of colors) {
+//   const { hex,rgb } = color;
+//     hexColors.push(hex);
+//     rgbColors.push(rgb);
+//   }
+//   console.log(hexColors);
+//   console.log(rgbColors)
+// --------------------------------------
+// Ми отримали прогноз погоди на два дні, з мінімальними і максимальними температурами, а також необов'язковими іконками.
+//  Заміни оголошення всіх змінних однією операцією деструктуризації властивостей об'єкта forecast. 
+// Задай значення за замовчуванням для іконок, 
+// змінних todayIcon і tomorrowIcon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+    
+
+const forecast = {
+    today: {
+      low: 28,
+      high: 32,
+      icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+    },
+    tomorrow: {
+      low: 27,
+      high: 31,
+    },
+  };
+  // Change code below this line
+  
+//   const highToday = forecast.today.high;
+//   const lowToday = forecast.today.low;
+//   const todayIcon = forecast.today.icon;
+  
+//   const highTomorrow = forecast.tomorrow.high;
+//   const lowTomorrow = forecast.tomorrow.low;
+//   const tomorrowIcon = forecast.tomorrow.icon;
+
+  const {today:{high:highToday,low:lowToday,icon:todayIcon= "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"},
+         tomorrow:{high:highTomorrow, low:lowTomorrow,icon:tomorrowIcon= "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"}}=forecast;
+  
+  console.log( highToday);
+    console.log( lowToday);
+    console.log( todayIcon )
+    console.log( highTomorrow)
+    console.log( lowTomorrow)
+    console.log( tomorrowIcon)
+
+    // ---------------____------------------------
+    // Функція calculateMeanTemperature(forecast) приймає один параметр forecast - об'єкт температур на два дні наступного формату.
+
+    //  {
+    //    today: { low: 10, high: 20 },
+    //    tomorrow: { low: 20, high: 30 }
+    //   }
+    // Заміни оголошення змінних todayLow, todayHigh, tomorrowLow і tomorrowHigh 
+    // однією операцією деструктуризації властивостей об'єкта forecast.
+
+
+    function calculateMeanTemperature(forecast) {
+
+
+        // const todayLow = forecast.today.low;
+        // const todayHigh = forecast.today.high;
+        // const tomorrowLow = forecast.tomorrow.low;
+        // const tomorrowHigh = forecast.tomorrow.high;
+
+        const{
+            today:{low:todayLow, high:todayHigh},
+            tomorrow:{low:tomorrowLow, high:tomorrowHigh}
+        }=forecast;
+      
+        // Change code above this line
+        return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+      }
+      console.log("calculateMeanTemperature=>", calculateMeanTemperature({
+        today: { low: 10, high: 20 },
+        tomorrow: { low: 20, high: 30 }
+      }))
+    //   --------------------------------------------------------------
+
+    const scores = [89, 64, 42, 17, 93, 51, 26];
+// Change code below this line
+const bestScore =Math.max(...scores);
+const worstScore =Math.round(...scores);
+
+console.log("max=>", bestScore, "min=>", worstScore)
