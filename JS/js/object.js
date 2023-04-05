@@ -329,8 +329,7 @@ function calculateTotalPrice(productName) {
     let totapPrice = 0;
     for (const product of products) {
         if (productName === product["name"]) {
-            
-            totapPrice = product["price"] * product.quantity
+            totapPrice = product["price"] * product.quantity;
         }
     }
 
@@ -344,27 +343,25 @@ function calculateTotalPrice(productName) {
 // console.log(calculateTotalPrice("Scanner")); // 8100
 //________________________--------
 
-
 const highTemperatures1 = {
     yesterday1: 28,
     today1: 26,
     tomorrow1: 33,
-  };
-  // const yesterday = highTemperatures.yesterday;
-  // const today = highTemperatures.today;
-  // const tomorrow = highTemperatures.tomorrow;
-  
-  const {yesterday1,today1,tomorrow1}= highTemperatures1;
-  
- 
-  const meanTemperature1 = (yesterday1 + today1 + tomorrow1)/3;
-  
-  console.log("yesterday", yesterday1)
-  console.log("tooday", today1)  
-  console.log("tomorrow", tomorrow1)
-  console.log("meanTemperature", meanTemperature1)
+};
+// const yesterday = highTemperatures.yesterday;
+// const today = highTemperatures.today;
+// const tomorrow = highTemperatures.tomorrow;
 
-  //---------------------------
+const { yesterday1, today1, tomorrow1 } = highTemperatures1;
+
+const meanTemperature1 = (yesterday1 + today1 + tomorrow1) / 3;
+
+console.log("yesterday", yesterday1);
+console.log("tooday", today1);
+console.log("tomorrow", tomorrow1);
+console.log("meanTemperature", meanTemperature1);
+
+//---------------------------
 
 //   const highTemperatures = {
 //     yesterday: 28,
@@ -372,7 +369,7 @@ const highTemperatures1 = {
 //     tomorrow: 33,
 //   };
 //   // Change code below this line
-  
+
 // //   const yesterday = highTemperatures.yesterday;
 // //   const today = highTemperatures.today;
 // //   const tomorrow = highTemperatures.tomorrow;
@@ -384,15 +381,13 @@ const highTemperatures1 = {
 //     icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg "
 // } = highTemperatures;
 
-  
 //   // Change code above this line
 //   const meanTemperature = (yesterday + today + tomorrow) / 3;
 //   console.log("yesterday", yesterday)
-//   console.log("tooday", today)  
+//   console.log("tooday", today)
 //   console.log("tomorrow", tomorrow)
 //   console.log("icon", icon)
 //   console.log("meanTemperature", meanTemperature)
-
 
 // const highTemperatures = {
 //     yesterday: 28,
@@ -400,7 +395,7 @@ const highTemperatures1 = {
 //     tomorrow: 33,
 //   };
 //   // Change code below this line
-  
+
 //   // const highYesterday = highTemperatures.yesterday;
 //   // const highToday = highTemperatures.today;
 //   // const highTomorrow = highTemperatures.tomorrow;
@@ -409,10 +404,10 @@ const highTemperatures1 = {
 //          today:highToday,
 //          tomorrow:highTomorrow,
 //         highIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg' } =highTemperatures;
-  
+
 //   // Change code above this line
 //   const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
-  
+
 //   console.log(highYesterday)
 //   console.log(highToday)
 //   console.log(highTomorrow)
@@ -426,11 +421,10 @@ const highTemperatures1 = {
 //     { hex: "#4caf50", rgb: "76,175,80" },
 //     { hex: "#ffeb3b", rgb: "255,235,59" },
 //   ];
-  
+
 //   const hexColors = [];
 //   const rgbColors = [];
-  
-  
+
 //   for (const color of colors) {
 //   const { hex,rgb } = color;
 //     hexColors.push(hex);
@@ -440,78 +434,155 @@ const highTemperatures1 = {
 //   console.log(rgbColors)
 // --------------------------------------
 // Ми отримали прогноз погоди на два дні, з мінімальними і максимальними температурами, а також необов'язковими іконками.
-//  Заміни оголошення всіх змінних однією операцією деструктуризації властивостей об'єкта forecast. 
-// Задай значення за замовчуванням для іконок, 
+//  Заміни оголошення всіх змінних однією операцією деструктуризації властивостей об'єкта forecast.
+// Задай значення за замовчуванням для іконок,
 // змінних todayIcon і tomorrowIcon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
-    
 
 const forecast = {
     today: {
-      low: 28,
-      high: 32,
-      icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+        low: 28,
+        high: 32,
+        icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
     },
     tomorrow: {
-      low: 27,
-      high: 31,
+        low: 27,
+        high: 31,
     },
-  };
-  // Change code below this line
-  
+};
+// Change code below this line
+
 //   const highToday = forecast.today.high;
 //   const lowToday = forecast.today.low;
 //   const todayIcon = forecast.today.icon;
-  
+
 //   const highTomorrow = forecast.tomorrow.high;
 //   const lowTomorrow = forecast.tomorrow.low;
 //   const tomorrowIcon = forecast.tomorrow.icon;
 
-  const {today:{high:highToday,low:lowToday,icon:todayIcon= "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"},
-         tomorrow:{high:highTomorrow, low:lowTomorrow,icon:tomorrowIcon= "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"}}=forecast;
-  
-  console.log( highToday);
-    console.log( lowToday);
-    console.log( todayIcon )
-    console.log( highTomorrow)
-    console.log( lowTomorrow)
-    console.log( tomorrowIcon)
+const {
+    today: {
+        high: highToday,
+        low: lowToday,
+        icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+    },
+    tomorrow: {
+        high: highTomorrow,
+        low: lowTomorrow,
+        icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+    },
+} = forecast;
 
-    // ---------------____------------------------
-    // Функція calculateMeanTemperature(forecast) приймає один параметр forecast - об'єкт температур на два дні наступного формату.
+// console.log(highToday);
+// console.log(lowToday);
+// console.log(todayIcon);
+// console.log(highTomorrow);
+// console.log(lowTomorrow);
+// console.log(tomorrowIcon);
 
-    //  {
-    //    today: { low: 10, high: 20 },
-    //    tomorrow: { low: 20, high: 30 }
-    //   }
-    // Заміни оголошення змінних todayLow, todayHigh, tomorrowLow і tomorrowHigh 
-    // однією операцією деструктуризації властивостей об'єкта forecast.
+// ---------------____------------------------
+// Функція calculateMeanTemperature(forecast) приймає один параметр forecast - об'єкт температур на два дні наступного формату.
 
+//  {
+//    today: { low: 10, high: 20 },
+//    tomorrow: { low: 20, high: 30 }
+//   }
+// Заміни оголошення змінних todayLow, todayHigh, tomorrowLow і tomorrowHigh
+// однією операцією деструктуризації властивостей об'єкта forecast.
 
-    function calculateMeanTemperature(forecast) {
+function calculateMeanTemperature(forecast) {
+    // const todayLow = forecast.today.low;
+    // const todayHigh = forecast.today.high;
+    // const tomorrowLow = forecast.tomorrow.low;
+    // const tomorrowHigh = forecast.tomorrow.high;
 
+    const {
+        today: { low: todayLow, high: todayHigh },
+        tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+    } = forecast;
 
-        // const todayLow = forecast.today.low;
-        // const todayHigh = forecast.today.high;
-        // const tomorrowLow = forecast.tomorrow.low;
-        // const tomorrowHigh = forecast.tomorrow.high;
+    // Change code above this line
+    return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+}
 
-        const{
-            today:{low:todayLow, high:todayHigh},
-            tomorrow:{low:tomorrowLow, high:tomorrowHigh}
-        }=forecast;
-      
-        // Change code above this line
-        return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
-      }
-      console.log("calculateMeanTemperature=>", calculateMeanTemperature({
-        today: { low: 10, high: 20 },
-        tomorrow: { low: 20, high: 30 }
-      }))
-    //   --------------------------------------------------------------
+// console.log(
+//     "calculateMeanTemperature=>",
+//     calculateMeanTemperature({
+//         today: { low: 10, high: 20 },
+//         tomorrow: { low: 20, high: 30 },
+    // })
+// );
+//   --------------------------------------------------------------
 
-    const scores = [89, 64, 42, 17, 93, 51, 26];
+const scores = [89, 64, 42, 17, 93, 51, 26];
 // Change code below this line
-const bestScore =Math.max(...scores);
-const worstScore =Math.round(...scores);
+const bestScore1 = Math.max(...scores);
+const worstScore1= Math.round(...scores);
 
-console.log("max=>", bestScore, "min=>", worstScore)
+// console.log("max=>", bestScore1, "min=>", worstScore1);
+// -------------------------------------------------------------
+// У змінних firstGroupScores, secondGroupScores і thirdGroupScores зберігаються результати тестування окремих груп. 
+// Використовуючи розподіл, доповни код таким чином, щоб:
+
+// У змінній allScores зберігався масив всіх результатів від першої до третьої групи.
+// У змінній bestScore був найвищий загальний бал.
+// У змінній worstScore був найнижчий загальний бал.
+
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [...firstGroupScores,...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max( ...allScores);
+// const worstScore = Math.min( ...allScores);
+
+// console.log(allScores)
+// console.log("max=>", bestScore, "min=>", worstScore);
+// ----------------------------------
+//Напиши функцію makeTask(data) яка приймає один параметр data - об'єкт з наступними властивостями.
+
+// text - текст завдання.
+// category - категорія завдання.
+// priority - пріоритет завдання.
+// Функція повинна створити і повернути новий об'єкт завдання, не змінюючи напряму параметр data.
+//  У новому об'єкті повинна бути властивість completed, значення якої зберігається в однойменній локальній змінній.
+
+// В параметрі data гарантовано буде тільки властивість text, а інші дві, category і priority, можуть бути відсутніми.
+//  Тоді, в новому об'єкті завдання, у властивостях category і priority повинні бути значення за замовчуванням, що зберігаються в однойменних локальних змінних.
+
+
+function makeTask(data) {
+    const completed = false;
+    const category = "General";
+    const priority = "Normal";
+    const newTaskObject = { category, priority, ...data,  completed, }
+    return newTaskObject
+}
+
+
+
+// Оголошена функція makeTask(data)
+// console.log(makeTask({})); //повертає { category: "General", priority: "Normal", completed: false }
+
+// console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));// повертає { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+
+// console.log(makeTask({ category: "Finance", text: "Take interest" }));// повертає { category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+
+// console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));// повертає { category: "General", priority: "Low", text: "Choose shampoo", completed: false }
+
+// console.log(makeTask({ text: "Buy bread" }));// повертає { category: "General", priority: "Normal", text: "Buy bread", completed: false }
+// // -----------------------
+
+function add(...args) {
+    let tottalArgs = 0;
+    for (const arg of args) {
+        console.log("arg=>" ,arg)
+         tottalArgs += arg;
+    }
+
+    return tottalArgs
+  }
+  console.log(add(15, 27));// повертає 42
+  console.log(add(12, 4, 11, 48));// повертає 75
+  console.log(add(32, 6, 13, 19, 8));// повертає 78
+  console.log(add(74, 11, 62, 46, 12, 36));// повертає 241
